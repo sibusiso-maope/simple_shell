@@ -45,7 +45,7 @@ char **separator(char *input);
 
 /******* PATH FINDER *******/
 
-int path_cmd(char **cmd);
+int path_command(char **cmd);
 char *build(char *token, char *value);
 char *_getenv(char *name);
 
@@ -55,8 +55,8 @@ void free_environment(char **env);
 void *fill_an_array(void *a, int el, unsigned int len);
 char *_memcpy(char *dest, char *src, unsigned int n);
 void *_calloc(unsigned int size);
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-void free_all(char **input, char *line);
+void *_reallocate(void *ptr, unsigned int old_size, unsigned int new_size);
+void free_allocated(char **input, char *line);
 
 /******* HELP HANDLERS *******/
 
