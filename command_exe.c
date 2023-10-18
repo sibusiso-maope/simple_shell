@@ -25,7 +25,9 @@ int history_display(__attribute__((unused))char **c, __attribute__((unused))int 
 	while ((getline(&line, &length, fp)) != -1)
 	{
 		counter++;
+
 		er = _itoa(counter);
+
 		PRINT(er);
 		free(er);
 		PRINT(" ");
@@ -114,7 +116,7 @@ int echo_bul(char **cmd, int st)
 
 	else if (_strncmp(cmd[1], "$$", 2) == 0)
 	{
-		print_number(pid);
+		print_number_unsigned(pid);
 		PRINT("\n");
 	}
 

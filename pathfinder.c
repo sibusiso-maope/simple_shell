@@ -24,7 +24,7 @@ char *build(char *token, char *value)
 
 	memset(command, 0, length);
 
-	command = _strcat((command, value);
+	command = _strcat((command, value));
 	command = _strcat(command, "/");
 	command = _strcat(command, token);
 
@@ -81,7 +81,7 @@ char *_getenv(char *name)
 
 	for (k = 0 ; environ[k]; k++)
 	{
-		if (_strncmp(name, environ[i], name_length) == 0)
+		if (_strncmp(name, environ[k], name_length) == 0)
 		{
 			value_length = _strlen(environ[k]) - name_length;
 

@@ -1,5 +1,24 @@
 #ifndef _SHELL_H_
-#define _SHELL_H_
+#define _SHELL_H
+
+
+/***** MACROS *****/
+#define PRINT(c) (write(STDERR_FILENO, c, _strlen(c)))
+#define BUFSIZE 10240
+#define DELIMITER " \t\r\n\a"
+
+/*** STANDARD LIBRARIES ***/
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <string.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <linux/limits.h>
 
 /****** ENVIRONMENT HANDLERS ******/
 
@@ -102,13 +121,20 @@ void read_file(char *file, char **argv);
 void treat_file(char *line, int count, FILE *fp, char **argv);
 void exit_bul_for_file(char **cmd, char *line, FILE *fd);
 
+/****** BUILT-IN COMMANDS STRUCT *****/
+
+/**
+ * struct _builtin - Defines a struct that conatins built-in commands
+ * with their respective implementation functions
+ * @command: - Built-in command
+ * @function: - Pointer to custom functions that have
+ * similar functionalities as the built-in commands
+ */
+
 typedef struct _builtin
 {
 	char *command;
 	int (*function)(char **line, int st);
 } builtin;
 
-#endif //shell.h
-
-
-
+#endif /*shell.h*/

@@ -37,7 +37,7 @@ void hashtag_handler(char *buff)
  */
 char *_getline()
 {
-	int k, rd, buffsize = BUFSIZE;
+	int k, rd, buffsize = BUFSIZ;
 	char c = 0, *buffer, *buf;
 
 	buffer = malloc(buffsize);

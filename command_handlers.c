@@ -10,11 +10,11 @@
 int handle_builtin(char **cmd, int st)
 {
 	builtin built_in[] = {
-		{"cd", change_dir},
-		{"env", dis_env},
+		{"cd", change_directory},
+		{"env", display_environment},
 		{"help", display_help},
 		{"echo", echo_bul},
-		{"history", history_dis},
+		{"history", history_display},
 		{NULL, NULL}
 	};
 

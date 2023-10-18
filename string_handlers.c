@@ -133,7 +133,7 @@ char *_strdup(char *str)
 	size_t length, k;
 	char *str2;
 
-	len = _strlen(str);
+	length = _strlen(str);
 
 	str2 = malloc(sizeof(char) * (length + 1));
 

@@ -11,7 +11,7 @@ char **parse_command(char *input)
 	char **args;
 	char *arg;
 	int k;
-	int buffsize = BUFSIZE;
+	int buffsize = BUFSIZ;
 
 	if (input[0] == ' ' && input[_strlen(input)] == ' ')
 		exit(0);
