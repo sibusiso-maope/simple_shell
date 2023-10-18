@@ -15,7 +15,7 @@ void print_number_int(int n)
 		u = -u;
 	}
 	if ((u / 10) > 0)
-		print_number(u / 10);
+		print_number_unsigned(u / 10);
 
 	_putchar(u % 10 + '0');
 }
@@ -30,7 +30,7 @@ void print_number_unsigned(unsigned int n)
 	unsigned int u = n;
 
 	if ((u / 10) > 0)
-		print_number(u / 10);
+		print_number_unsigned(u / 10);
 
 	_putchar(u % 10 + '0');
 }

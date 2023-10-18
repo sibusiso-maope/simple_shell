@@ -52,6 +52,7 @@ char *_strcat(char *dest, char *src)
  * @n: amount of characters to compare
  * Return: 1 if the strings don't match otherwise 0
  */
+
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t k;
@@ -75,6 +76,7 @@ int _strncmp(const char *s1, const char *s2, size_t n)
  * @s2: second string
  * Return: 0 if identical otherwise how much diffrent
  */
+
 int _strcmp(char *s1, char *s2)
 {
 	int cmp = 0, k;
@@ -126,6 +128,7 @@ int intlen(int num)
  * @c: character to check
  * Return: 1 if true 0 if false
  */
+
 int _isalpha(int c)
 {
 	if (((c >= 97) && (c <= 122)) || ((c >= 65) && (c <= 90)))
@@ -170,7 +173,7 @@ char *_itoa(unsigned int n)
 
 	length = intlen(n);
 
-	s = malloc(len + 2);
+	s = malloc(length + 2);
 
 	if (!s)
 	{
@@ -187,9 +190,8 @@ char *_itoa(unsigned int n)
 	}
 
 	s[k] = (n % 10) + '0';
-	array_rev(s, len);
+	array_rev(s, length);
 	s[k + 1] = '\0';
 
 	return (s);
 }
-

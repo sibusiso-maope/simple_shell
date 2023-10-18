@@ -32,6 +32,7 @@ int _putchar(char c)
  * @str: pointer to string
  * Return: void
  */
+
 void _puts(char *str)
 {
 	int k;
@@ -83,6 +84,7 @@ int _atoi(char *s)
  * @n: number of charaters to be copied
  * Return: copied strings
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
 	int k = 0;
@@ -125,20 +127,21 @@ char *_strcpy(char *dest, char *src)
  * @str: string
  * Return: duplicated string or Null if failed
  */
+
 char *_strdup(char *str)
 {
-	size_t len, k;
+	size_t length, k;
 	char *str2;
 
 	len = _strlen(str);
 
-	str2 = malloc(sizeof(char) * (len + 1));
+	str2 = malloc(sizeof(char) * (length + 1));
 
 	if (!str2)
 	{
 		return (NULL);
 	}
-	for (k = 0; k <= len; k++)
+	for (k = 0; k <= length; k++)
 	{
 		str2[k] = str[k];
 	}
@@ -152,6 +155,7 @@ char *_strdup(char *str)
  * @n: amount of characters to compare
  * Return: 1 if the strings don't match otherwise 0
  */
+
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t k;

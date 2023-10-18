@@ -47,6 +47,7 @@ void free_allocated(char **cmd, char *line)
  *@new_size: new size of the pointer
  *Return: Pointer to reallocated memory
  */
+
 void *_reallocate(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *result;

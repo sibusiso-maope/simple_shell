@@ -76,11 +76,11 @@ int display_help(char **cmd, __attribute__((unused))int st);
 int check_builtin(char **cmd);
 int handle_builtin(char **cmd, int st);
 int echo_bul(char **cmd, int st);
-int history_dis(__attribute__((unused))char **c,
+int history_display(__attribute__((unused))char **c,
 		__attribute__((unused)) int st);
 void exit_bul(char **cmd, char *input, char **argv, int c, int stat);
-int change_dir(char **cmd, __attribute__((unused))int st);
-int dis_env(__attribute__((unused)) char **cmd,
+int change_directory(char **cmd, __attribute__((unused))int st);
+int display_environment(__attribute__((unused)) char **cmd,
 	    __attribute__((unused)) int st);
 
 /******* ERROR HANDLERS ******/
@@ -91,9 +91,9 @@ void error_file(char **argv, int c);
 
 /****** PARSED ARGUMENT HANDLER FUNCTIONS *****/
 
-char **parse_cmd(char *input);
+char **parse_command(char *input);
 int handle_builtin(char **cmd, int er);
-int check_cmd(char **cmd, char *input, int c, char **argv);
+int check_command(char **cmd, char *input, int c, char **argv);
 void signal_to_handle(int sig);
 
 /****** FILE ARGUMENT HANDLER FUNCTIONS ******/
@@ -108,7 +108,7 @@ typedef struct _builtin
 	int (*function)(char **line, int st);
 } builtin;
 
-#endif /*shell.h*/
+#endif //shell.h
 
 
 
