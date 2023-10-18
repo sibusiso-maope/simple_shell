@@ -53,23 +53,6 @@ char *_strcat(char *dest, char *src)
  * Return: 1 if the strings don't match otherwise 0
  */
 
-int _strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t k;
-
-	if (s1 == NULL)
-		return (-1);
-
-	for (k = 0; k < n && s2[k]; k++)
-	{
-		if (s1[k] != s2[k])
-		{
-			return (1);
-		}
-	}
-	return (0);
-}
-
 /**
  * _strcmp - function that compares two string
  * @s1: first string
@@ -161,7 +144,7 @@ void array_rev(char *arr, int len)
 }
 
 /**
- * _itoa - funciton that convert integer to character
+ * _itoa - function that convert integer to character
  * @n: integer to convert
  * Return: character pointer
  */
