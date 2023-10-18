@@ -24,7 +24,7 @@ char *build(char *token, char *value)
 
 	memset(command, 0, length);
 
-	command = _strcat((command, value));
+	command = _strcat(command, value);
 	command = _strcat(command, "/");
 	command = _strcat(command, token);
 

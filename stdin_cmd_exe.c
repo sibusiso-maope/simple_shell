@@ -29,7 +29,7 @@ int check_command(char **cmd, char *input, int c, char **argv)
 		if (access(cmd[0], R_OK) != 0)
 		{
 			print_error(cmd[0], c, argv);
-			free_all(cmd, input);
+			free_allocated(cmd, input);
 			exit(127);
 		}
 		if (execve(*cmd, cmd, environ) == -1)
